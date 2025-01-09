@@ -1,9 +1,38 @@
-
 body {
     background-color: moccasin;
     color: black;
     font-family: Arial, Helvetica, sans-serif;
     padding-left: 3em;
+}
+
+.grid-12 {
+    display: grid;
+    grid-template-columns: repeat(3);
+
+    h1 {
+        grid-column-start: span 3;
+
+    }
+
+    ol {
+        grid-column-start: 2;
+    }
+
+    footer {
+        grid-column-start: span 3;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+thead {
+    background-color: cadetblue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:medium
+}
+
+tbody {
+background-color: chocolate;
 }
 
 header {
@@ -14,7 +43,7 @@ header {
 ol {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 12pt;
-    color:lightseagreen
+    color: lightseagreen
 }
 
 img {
@@ -23,7 +52,9 @@ img {
 }
 
 footer {
-    grid-area: auto;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: blueviolet;
 }
 
 td {
@@ -31,7 +62,7 @@ td {
 }
 
 h1 {
-    color:black;
+    color: black;
     font-size: 24pt;
     text-align: center;
 }
@@ -52,9 +83,9 @@ h4 {
 }
 
 fieldset {
- border-radius: 2px;
- padding: 20px;
- display:grid
+    border-radius: 2px;
+    padding: 20px;
+    display: grid
 }
 
 table tr td {
@@ -65,11 +96,3 @@ table tr td {
 li {
     list-style-type: none;
 }
-
-head,
-header,
-footer {
-    display: flex;
-}
-
-
