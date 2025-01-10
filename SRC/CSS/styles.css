@@ -32,7 +32,7 @@ thead {
 }
 
 tbody {
-background-color: chocolate;
+    background-color: chocolate;
 }
 
 header {
@@ -96,3 +96,44 @@ table tr td {
 li {
     list-style-type: none;
 }
+
+@media screen and (max-width:768px) {
+
+    /* MOBILE STYLE */
+    body {
+        main {
+            nav {
+                grid-column-start: span 12;
+            }
+
+            section {
+                grid-column-start: span 12 flex-direction;
+
+                article {
+                    +article {
+                        margin-top: 1em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:769px) {
+
+    /*DESKTOP STYLES */
+    body {
+        main {
+            nav {
+                grid-column-start: span 3;
+            }
+
+            section {
+                grid-column-start: span 9;
+                justify-content: space-around;
+            }
+        }
+    }
+}
+
+

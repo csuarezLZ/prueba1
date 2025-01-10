@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejemplo responsive</title>
+    <style>
+        h1 {
+            font-size: 24pt;
+        }
+
+        body {
+            display: grid;
+            grid-template-columns: repeat (12, 1fr);
+        }
+
+        main {
+            display: grid;
+        }
+
+        header {
+            grid-column-start: span 12;
+            background-color: blueviolet;
+        }
+
+        main {
+            grid-column-start: span 12;
+        }
+
+        nav {
+            background-color: azure;
+        }
+
+        section {
+            padding: 1em;
+            background-color: aqua;
+
+            article {
+                padding: 5em;
+                background-color: beige;
+            }
+        }
+
+        footer {
+            grid-column-start: span 12;
+            background-color: blueviolet;
+        }
+
+
+        @media screen and (max-width:768px) {
+
+            /* MOBILE STYLE */
+            body {
+                main {
+                    nav {
+                        grid-column-start: span 12;
+                    }
+
+                    section {
+                        grid-column-start: span 12 flex-direction;
+
+                        article {
+                            +article {
+                                margin-top: 1em;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        @media screen and (min-width:769px) {
+
+            /*DESKTOP STYLES */
+            body {
+                main {
+                    nav {
+                        grid-column-start: span 3;
+                    }
+
+                    section {
+                        grid-column-start: span 9;
+                        justify-content: space-around;
+                    }
+                }
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+
+</html>
